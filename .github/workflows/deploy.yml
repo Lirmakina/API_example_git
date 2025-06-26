@@ -10,8 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -22,6 +21,12 @@ jobs:
         run: |
           pip install mkdocs mkdocs-material
 
-      - name: Deploy to GitHub Pages
+      - name: Build site
         run: |
-          mkdocs gh-deploy --force
+          mkdocs build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          personal_token: ${{ secrets.TOKEN_GH }}
+          publish_dir: ./site
