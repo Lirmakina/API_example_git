@@ -1,1 +1,8 @@
-site_name: My Docs
+site_name: API документация
+site_description: Создаю документацию на MkDocs
+
+theme: material
+
+nav:
+  - Home: index.MkDocs
+  - About: about.md
