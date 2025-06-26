@@ -1,8 +1,7 @@
 site_name: API документация
 site_description: Создаю документацию на MkDocs
 
-theme:
-  name: material
+theme: material
 
 nav:
   - Home: index.md
