@@ -1,6 +1,9 @@
 site_name: API документация
 site_description: С помощью этого API вы можете создавать и искать пользователей, а также изменять информацию о них.
 
+site_url: https://lirmakina.github.io/API_example_git/
+use_directory_urls: false
+
 theme:
   name: material
   features:
