@@ -30,3 +30,4 @@ jobs:
         with:
           personal_token: ${{ secrets.TOKEN_GH }}
           publish_dir: ./site
+          publish_branch: gh-pages   
