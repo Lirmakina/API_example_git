@@ -7,9 +7,9 @@ theme:
     - navigation.expand
 
 nav:
-  - Главная: index.md
+  - index.md
   - Начало работы:
-    - Авторизация: Authorize.md
-    - Отправить запрос: Try.md
+      - Авторизация: Authorize.md
+      - Отправить запрос: Try.md
   - Справочник API: 
-    - Операции с пользователями: Method.md
+      - Операции с пользователями: Method.md
