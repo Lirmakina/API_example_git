@@ -10,7 +10,7 @@ theme:
     - navigation.expand
 
 nav:
-  - index.md
+  - Описание API: index.md
   - Начало работы:
       - Авторизация: Authorize.md
       - Отправить запрос: Try.md
