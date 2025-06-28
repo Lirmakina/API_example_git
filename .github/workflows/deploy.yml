@@ -1,4 +1,4 @@
-name: Deploy MkDocs to GitHub Pages
+name: Deploy MkDocs site to GitHub Pages
 
 on:
   push:
@@ -13,8 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -25,8 +24,9 @@ jobs:
         run: |
           pip install mkdocs mkdocs-material
 
-      - name: Build site
-        run: mkdocs build
+      - name: Build site with site_url for GitHub Pages
+        run: |
+          mkdocs build --site-url=https://lirmakina.github.io/API_example_git/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
@@ -34,4 +34,3 @@ jobs:
           personal_token: ${{ secrets.TOKEN_GH }}
           publish_branch: gh-pages
           publish_dir: ./site
-          force_orphan: true
