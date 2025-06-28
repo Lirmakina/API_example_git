@@ -1,8 +1,14 @@
 site_name: API документация
-site_description: Создаю документацию на MkDocs!
+site_description: С помощью этого API вы можете создавать и искать пользователей, а также изменять информацию о них.
 
 theme: material
+features:
+    - navigation.expand
 
 nav:
-  - Home: index.md
-  - About: about.md
+  - Описание API: Description.md
+  - Начало работы:
+    - Авторизация: Authorize.md
+    - Отправить запрос: Try.md
+  - Справочник API: 
+    - Операции с пользователями: Method.md
