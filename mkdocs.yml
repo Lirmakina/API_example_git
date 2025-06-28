@@ -7,7 +7,7 @@ theme:
     - navigation.expand
 
 nav:
-  - Описание API: Description.md
+  - Главная: index.md
   - Начало работы:
     - Авторизация: Authorize.md
     - Отправить запрос: Try.md
