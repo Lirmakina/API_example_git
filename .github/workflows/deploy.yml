@@ -5,9 +5,6 @@ on:
     branches:
       - master
 
-permissions:
-  contents: write
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -24,13 +21,12 @@ jobs:
         run: |
           pip install mkdocs mkdocs-material
 
-      - name: Build site with site_url for GitHub Pages
-        run: |
-          mkdocs build --site-url=https://lirmakina.github.io/API_example_git/
+      - name: Build site
+        run: mkdocs build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           personal_token: ${{ secrets.TOKEN_GH }}
-          publish_branch: gh-pages
           publish_dir: ./site
+          publish_branch: gh-pages
