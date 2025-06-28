@@ -1,16 +1,20 @@
-name: Deploy MkDocs site to GitHub Pages
+name: Deploy MkDocs to GitHub Pages
 
 on:
   push:
     branches:
       - master
 
+permissions:
+  contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -22,12 +26,12 @@ jobs:
           pip install mkdocs mkdocs-material
 
       - name: Build site
-        run: |
-          mkdocs build
+        run: mkdocs build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           personal_token: ${{ secrets.TOKEN_GH }}
+          publish_branch: gh-pages
           publish_dir: ./site
-          publish_branch: gh-pages   
+          force_orphan: true
