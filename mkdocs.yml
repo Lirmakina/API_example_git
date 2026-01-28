@@ -4,7 +4,7 @@ site_description: С помощью этого API вы можете созда�
 theme:
   name: material
   features:
-    - navigation.expand
+    - navigation.tracking
 
 plugins:
   - search
