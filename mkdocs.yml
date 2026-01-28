@@ -10,10 +10,20 @@ plugins:
   - search
 
 nav:
-  - Главная: index.md
-  - Описание API: Description.md
-  - Начало работы:
-      - Авторизация: Authorize.md
-      - Отправить запрос: Try.md
-  - Справочник API:
-      - Операции с пользователями: Method.md
+  - Главная страница: index.md
+  
+  - API:
+    - Что такое API: api/api.md
+
+  - Doc-as-Code:
+    - Git:
+        - Что такое Git: doc-as-code/git/about-git.md
+        - Команды Git: doc-as-code/git/teams-git.md
+
+    - Создать сайт с MkDocs:
+        - Описание: doc-as-code/mkdocs/create-site-with-mkdocs/description.md
+        - Инструкция: doc-as-code/mkdocs/create-site-with-mkdocs/instruction.md
+
+  - Регламенты поддержки:
+      - Что нужно знать о поддержке: regulations-support/about-support.md
+
