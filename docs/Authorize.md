@@ -31,7 +31,7 @@ API доступен в нескольких окружениях:
 | Production  | `https://api.documentat.io/api/prod` |     |
 | Development | `https://api.documentat.io/api/dev`  |     |
 |             |                                      |     |
-| Cnjk,.tw    | rjghweg                              |     |
+|             |                                      |     |
 |             |                                      |     |
 
 ---
