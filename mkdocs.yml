@@ -13,7 +13,7 @@ nav:
   - Главная страница: index.md
   
   - API:
-    - Что такое API: api/api.md
+    - Что такое API: api/about-api.md
 
   - Doc-as-Code:
     - Git:
